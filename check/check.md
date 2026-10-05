@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will locate your existing Oracle Autonomous AI Lakehouseas as an ADMIN user and create a workshop Essbase user with the necessary permissions. You will then sign in as the Essbase user to confirm access to Database Actions and Data Studio.
+In this lab, you will locate your existing Oracle Autonomous AI Lakehouseas as an ADMIN user and create an Essbase user with the necessary permissions. You will then sign in as said Essbase user to confirm access to Database Actions and Data Studio.
 
 Estimated Time: 35 minutes
 
@@ -16,20 +16,20 @@ In this lab, you will:
 
 - Locate an existing Autonomous AI Lakehouse in your tenancy.
 - Open Database Actions using the database ADMIN credentials.
-- Create a workshop user with Web Access and the Data Studio role.
-- Verify that the workshop user can sign in.
+- Create a user with Web Access and the Essbase Power User role.
+- Verify that the Essbase user can sign in.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-- An existing Autonomous AI Lakehouse with embedded Essbase.
+- An existing Autonomous AI Lakehouse.
 - An OCI ADMIN account that can view the AI Lakehouse in the Console.
 - Access to Database Actions in AI Lakehouse.
 
 ## Task 1: Locate the Existing Autonomous AI Lakehouse
 
-1. Sign in to the Oracle Cloud Infrastructure Console.
+1. [Sign in to Oracle Cloud](https://www.oracle.com/cloud/sign-in.html)
 
 2. Open the hamburger menu in the top left corner and select **Oracle AI Database**, then **Autonomous AI Database**.
 ![OCI navigation menu with Autonomous AI Database highlighted](images/ailh_step1.png)

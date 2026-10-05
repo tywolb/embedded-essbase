@@ -22,9 +22,8 @@ In this lab, you will:
 
 This lab assumes you have:
 
-- Access to embedded Essbase with permission to import a new application.
-- The approved PeakGear application uploaded to AI Lakehouse.
-- Essbase Power User permissions for cube building.
+- Access to embedded Essbase with the Essbase user credentials.
+- Essbase Power User permissions for application upload.
 
 ## Task 1: Import the Application and Load Data
 
@@ -36,9 +35,9 @@ This lab assumes you have:
 3. Select **File Browser**.
 ![Data Load in Data Studio 2](images/temp5.png)
 
-4. Select `peakgear_sales.xlsx` from the extracted package. Do not select the CSV files.
+4. Select `peakgear_sales.xlsx` from the extracted package and select `Open`. Do not select the ZIP file.
 ![Data Load in Data Studio 3](images/import2.png)
-    > **Note:** Confirm the file name does not contain a space such as `peakgear_sales 2.xlsx`
+    > **Note:** Confirm the file name does not contain a space such as `peakgear_sales 2.xlsx`. If it does, right-click on the file and rename it.
 
 5. Confirm that the application name is `peakgear_sales` and the cube name is `Sales`, then select **OK**.
 ![Data Load in Data Studio 3](images/import.png)
@@ -73,7 +72,7 @@ This lab assumes you have:
 1. Go back to the Home Page and open the `peakgear_sales` application again.
 ![Data Load in Data Studio 3](images/import7.png)
 
-2. Under **Database** click the Cube button next to **Sales** to **Analyze Data**.
+2. Under **Database** click the **Analyze Data** button to the right of **Sales**.
 ![Data Load in Data Studio 3](images/cube3.png)
 
 3. In **Ad Hoc Analysis**, select a member and click **Zoom In** in the upper-left toolbar. Repeat along each path:
