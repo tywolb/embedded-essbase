@@ -1,0 +1,42 @@
+{
+  "workshoptitle": "Essbase on AI Lakehouse",
+  "help": "livelabs-help-essbase_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Lab 1: Check existing Lakehouse and prepare access",
+      "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+      "filename": "../../check/check.md"
+    },
+    {
+      "title": "Lab 2: Launch Embedded Essbase",
+      "filename": "../../launch/launch.md"
+    },
+    {
+      "title": "Lab 3: Import the prepared application",
+      "filename": "../../import/import.md"
+    },
+    {
+      "title": "Lab 4: Analyze and Investigate",
+      "filename": "../../analyze/analyze.md"
+    },
+    {
+        "title": "Lab 5: Connect through MCP",
+        "filename": "../../MCP/MCP.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
+    },
+    {
+            "title": "Other LiveLabs you might like",
+            "description": "Other LiveLabs you might like",
+            "filename": "../../other-livelabs/other-livelabs.md"
+    }
+  ]
+}
