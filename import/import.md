@@ -51,7 +51,7 @@ This lab assumes you have:
 ![Data Load in Data Studio 3](images/import4.png)
 
 2. Open the job details and confirm that the job completed successfully.
-![Data Load in Data Studio 3](images/import5.png)
+![Data Load in Data Studio 3](images/importtemp.png)
 
 3. If the job reports an error, review its details before continuing.
 ![Data Load in Data Studio 3](images/import6.png)
@@ -81,6 +81,8 @@ This lab assumes you have:
    - `Product` → `ACTIVEWEAR` → `SKU-100002`
    - `Store` → `Austin` → `Store_004`
    - `Measures` → `Sales`
+
+> **Note:** Alternatively, go directly to the same POV by renaming each dimension to the last value in its path: Time = 2021-01, Product = SKU-100002, Store = Store_004, and Measures = Sales.
 
 4. Select each final member and click **Keep Only**. Confirm the resulting sales value is **1,448.55**.
 ![Data Load in Data Studio 3](images/cube5.png)

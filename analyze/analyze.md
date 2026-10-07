@@ -8,7 +8,7 @@ Estimated Time: 25 minutes
 
 ### About Smart View and Drill-Through
 
-Smart View lets you analyze Essbase data in Microsoft Excel. A drill-through report can show the detailed source records behind a cube value when a Lakehouse datasource and drillable region have been configured for the cube.
+Smart View lets you analyze Essbase data in Microsoft Excel. A drill-through report can show the detailed source records behind a cube value when an Essbase datasource and drillable region have been configured for the cube.
 
 ### Objectives
 
@@ -23,56 +23,73 @@ In this lab, you will:
 This lab assumes you have:
 
 - Microsoft Excel with a compatible Oracle Smart View for Office installation.
-- The Essbase Smart View connection URL and the workshop user's Essbase credentials.
+- The workshop user's Essbase credentials.
 - The PeakGear cube imported with data in Lab 3.
-- Access to the PeakGear sales transaction detail loaded or verified in Lab 1.
-- A drill-through report configured for the PeakGear cube and its Lakehouse detail datasource.
 
-<!-- Author TODO: Add the tested Smart View URL, the exact cube members, and the drill-through report setup or preconfiguration steps before publishing. -->
 
-## Task 1: Connect Smart View to the PeakGear Cube
 
-1. Open Microsoft Excel and select the **Smart View** ribbon.
+## Task 1: Download and Install Smart View
 
-2. Select **Panel**, then open **Private Connections**.
+1. Close Excel and all other Microsoft Office applications.
+2. Open the [Oracle Smart View for Office download page](https://www.oracle.com/middleware/technologies/epm-smart-view-downloads.html).
+3. Click **Download Now**. You may be prompted to sign in with your OCI credentials.
+![SmartView](images/sv1.png)
 
-3. Enter the Smart View URL supplied for your Essbase environment. The URL ends with `/essbase/smartview`.
+4. Check the box for the Licensing Agreement then Click the **ZIP File** for the latest version of SmartView.
+![SmartView](images/sv2.png)
 
-4. Sign in with the workshop user's Essbase credentials.
+5. Extract the ZIP file.
+![SmartView](images/sv3.png)
 
-5. Expand the Essbase connection, select the PeakGear application and cube, and start an ad hoc analysis.
+6. Open the extracted folder and run **SmartView.exe**. Follow the installation prompts.
+![SmartView](images/sv4.png)
 
-## Task 2: Compare PeakGear Sales
+7. Reopen Excel and confirm that the **Smart View** tab appears on the ribbon. You are now ready for Task 2.
 
-1. Place the sales measure in the grid and select a product and store member that contain data.
 
-2. Place time periods across the columns and compare sales between two periods.
+## Task 2: Connect to Essbase
 
-3. Zoom in on a product or store hierarchy to inspect the members contributing to a summary value.
+1. Open a blank workbook in Excel.
+2. Select **Smart View → Panel → Private Connections**.
+![SmartView](images/sv5.png)
 
-4. Record one sales value and its selected time, product, and store members for the next task.
+3. In the SmartView Panel select the drop down arrow then **Create new connection**.
+![SmartView](images/sv6.png)
 
-## Task 3: Drill Through to Lakehouse Detail
+4. Select **Smart View HTTP Provider**.
+![SmartView](images/sv7.png)
 
-1. In the Smart View grid, select a sales cell within the configured drillable region.
+5. Enter the Smart View URL to connect. You can set this as the default connection if you would like to.
 
-2. On the **Essbase** ribbon, select **Drill-through**.
+> **Note:** Copy your Essbase URL, remove every character after /essbase and add /smartview. Link should be formatted as https://<essbase-host>/essbase/smartview
 
-3. Review the returned PeakGear sales transaction records in the new worksheet.
+![SmartView](images/sv8.png)
 
-4. Confirm that the records correspond to the time, product, and store members selected in the cube.
+6. You will be prompted to sign in to Essbase. Use the Essbase user credentials from Lab 1.
+![SmartView](images/sv9.png)
 
-    > **Note:** If **Drill-through** is unavailable or returns no records, verify that the PeakGear detail source and drill-through report are configured for the selected cell.
+7. Select the database to view in SmartView. Drill into the Sales database by clicking the + next to **Servers → EssbaseCluster → peakgear_sales → Sales** then click **Next**.
+![SmartView](images/sv10.png)
 
-You have compared PeakGear sales in Smart View and investigated a cube value using Lakehouse transaction detail.
+8. Provide a name for the data, such as `ADBS_PRES_SALES`, then click **Finish**.
 
-## Learn More
+9. Click **Connect** in the bottom right of the SmartView window. The data is now connected to SmartView
+![SmartView](images/sv11.png)
 
-- [Analyze an Application in Smart View](https://docs.oracle.com/en/database/other-databases/essbase/26/esscd/top-tasks-oracle-essbase.html)
-- [Introduction to Essbase Drill Through](https://docs.oracle.com/en/database/other-databases/essbase/26/ugess/introduction-essbase-drill-through.html)
-- [Test Drill Through Reports](https://docs.oracle.com/en/database/other-databases/essbase/21/ugess/test-drill-reports.html)
+## Task 3: Ad Hoc Analysis in SmartView
 
-## Acknowledgements
+1. Click **Ad Hoc Analysis** in the bottom of the SmartView window. You now are viewing the Ad Hoc Analysis function of Essbase in Excel.
+![SmartView](images/sv12.png)
 
-* **Author** - Ty Wolber, Cloud Engineer
-* **Last Updated By/Date** - Ty Wolber, October 2026
+2. In **Ad Hoc Analysis**, select a member and click **Zoom In** in the upper-left toolbar. Repeat along each path:
+
+   - `Time` → `FY2021` → `2021-Q1` → `2021-01`
+   - `Product` → `ACTIVEWEAR` → `SKU-100002`
+   - `Store` → `Austin` → `Store_004`
+   - `Measures` → `Sales`
+
+> **Note:** Alternatively, go directly to the same POV by renaming each dimension to the last value in its path: Time = 2021-01, Product = SKU-100002, Store = Store_004, and Measures = Sales.
+
+![SmartView](images/sv13.png)
+
+3. Select each final member and click **Keep Only**. Confirm the resulting sales value is **1,448.55**. You have now performed Ad Hoc Analysis in Excel through SmartView.

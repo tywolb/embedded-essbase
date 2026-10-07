@@ -29,13 +29,13 @@ This lab assumes you have:
 
 ## Task 1: Verify the Essbase MCP Endpoint
 
-1. Obtain the Essbase MCP base URL and authentication instructions from your workshop administrator.
+1. Sign in to your embedded Essbase instance.
 
-2. Confirm that the endpoint is available in your environment. The standard Essbase endpoint has the form `https://<essbase-server>/essbase/rest/v1/ess-mcp`.
+2. In a browser, open `https://<your-Essbase-host>/essbase/rest/v1/ess-mcp?profile=viewer`.
 
-3. Add `?profile=viewer` to the endpoint URL for this lab.
+3. Confirm the response contains `"name": "Essbase MCP"` and URLs for the `tools` and `call` endpoints.
 
-    > **Note:** Use the endpoint confirmed for your embedded environment. Do not assume that the standard URL is enabled in every Lakehouse.
+4. Open `https://<your-Essbase-host>/essbase/rest/v1/ess-mcp/tools?profile=viewer` and confirm that a list of read-only tools appears.
 
 ## Task 2: Connect an Approved AI Client
 
