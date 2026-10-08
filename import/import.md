@@ -29,20 +29,26 @@ This lab assumes you have:
 
 1. Download and extract the [PeakGear Sporting Goods Data](files/peakgear-sales.zip) on your computer. This will be uploaded to Essbase to build the Sales Cube.
 
-2. On the Essbase home page select **Import**.
+2. Log in to Essbase as the workshop user created in Lab 1.
+![Essbase Login](images/essbase1.png)
+    > **Note:** If the Essbase user cannot sign-in to Essbase, return to Data Actions as the ADMIN user and refer to Lab 1 Task 3.
+
+You have launched embedded Essbase and verified the workshop user's sign-in.
+
+3. On the Essbase home page select **Import**.
 ![Essbase Login](images/ess2.png)
 
-3. Select **File Browser**.
+4. Select **File Browser**.
 ![Data Load in Data Studio 2](images/temp5.png)
 
-4. Select `peakgear_sales.xlsx` from the extracted package and select `Open`. Do not select the ZIP file.
+5. Select `peakgear_sales.xlsx` from the extracted package and select `Open`. Do not select the ZIP file.
 ![Data Load in Data Studio 3](images/import2.png)
     > **Note:** Confirm the file name does not contain a space such as `peakgear_sales 2.xlsx`. If it does, right-click on the file and rename it.
 
-5. Confirm that the application name is `peakgear_sales` and the cube name is `Sales`, then select **OK**.
+6. Confirm that the application name is `peakgear_sales` and the cube name is `Sales`, then select **OK**.
 ![Data Load in Data Studio 3](images/import.png)
 
-6. Confirm that one new application, `peakgear_sales`, appears on the Applications page.
+7. Confirm that one new application, `peakgear_sales`, appears on the Applications page.
 ![Data Load in Data Studio 3](images/import3.png)
 
 ## Task 2: Review the Import Job

@@ -85,10 +85,10 @@ This lab assumes you have:
 1. Sign out of the **ADMIN** session, or open a separate private browser window.
 ![Sign Out of Admin](images/ailh_11.png)
 
-2. Sign in with the Essbase user's credentials from Task 3.
+2. Sign in with the Essbase user's credentials from Task 3 to test the credentials.
 ![Sign In to Essbase User](images/ailh_12.png)
 
-3. Keep the credentials saved and Database Actions URL available for the next lab.
+3. Keep the credentials saved for the next lab.
 
 You have prepared and verified the database user. In the next lab, you will use this account to launch Essbase embedded on AI Lakehouse.
 
