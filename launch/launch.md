@@ -36,15 +36,13 @@ This lab assumes you have:
 3. Scroll down to **Essbase** then click **Edit**.
 ![Essbase Login](images/t2.png)
 
-4. Toggle **Enable Essbase** on and click apply. You can configure the OCPU count and idle time here as well.
+4. Toggle on **Enable Essbase** and click apply. You can configure the OCPU count and idle time here as well.
 ![Essbase Login](images/t3.png)
 
 5. After AI Lakehouse finishes updating, copy the URL under Essbase and paste it in a new browser window.
-
-    > **Note:** Alternatively, launch Essbase by copying the Database actions URL from the search bar and replace `/ords/...` with `/essbase/jet`
 ![Essbase Login](images/t4.png)
 
-6. On the Essbase sign-in page, enter the **Admin Credentials**.
+6. On the Essbase sign-in page, enter the **Admin** Credentials.
 ![Essbase Login](images/temp6.png)
 
 7. Select **Sign In**. Essbase will take a few minutes to provision when the first user logs in. After provisioning starts proceed to Task 2.
@@ -67,7 +65,7 @@ This lab assumes you have:
 ![Object Storage](images/ob5.png)
 ![Object Storage](images/ob6.png)
 
-6. On the same user page, open **Tokens and keys**. If you already have the matching private key file, copy its **Fingerprint** and skip step 7. Otherwise, click **Add API Key**.
+6. On the same user page, open **Tokens and keys**. If you already have the matching private key file, copy its **Fingerprint** and skip Step 7 and 8. Otherwise, click **Add API Key**.
 ![Object Storage](images/ob7.png)
 
 7. Download the new **private key** `.pem` file then click click **Add**
@@ -76,11 +74,11 @@ This lab assumes you have:
 8. Copy the displayed fingerprint under **Fingerprint**. Keep the private key in a secure location.
 ![Object Storage](images/ob9.png)
 
-9. Open the profile menu and select **Tenancy: <tenancy name>**. Copy the **Tenancy OCID**.
+9. Open the profile menu and select your tenancy name. Copy the **Tenancy OCID**.
 ![Object Storage](images/ob10.png)
 ![Object Storage](images/ob11.png)
 
-4. Return to the **Catalog Object Storage** form in Essbase and enter:
+10. Return to Essbase as **Admin** user and click **Configure** to add **Catalog Object Storage**.
 
    | Essbase field | Value to enter |
    | --- | --- |
@@ -94,19 +92,7 @@ This lab assumes you have:
    | **Bucketname** | The exact bucket name created above |
    | **Private key passphrase** | Enter it only if the private key was created with a passphrase |
 
-5. Save the catalog configuration and confirm Essbase opens successfully. Then continue to the application import.
-
-> **Note:** The private key is different from an SSH key or a public API key. Do not put its contents or passphrase in the LiveLab Markdown, screenshots, or a Git repository. If initialization fails, verify that the fingerprint matches the selected private key and that its OCI user can access the bucket.
-
-3. Confirm that the Essbase home page opens and that you are signed in as the workshop user.
-![Essbase Login](images/temp4.png)
-
-4. Locate the **Applications** area and the **Import** action. You will import and verify the prepared PeakGear application in the next lab.
-![Essbase Login](images/ess2.png)
-
-    > **Note:** If the Essbase user cannot sign-in to Essbase, return to Data Actions as the ADMIN user and refer to Lab 1 Task 3.
-
-You have launched embedded Essbase and verified the workshop user's sign-in.
+11. Save the catalog configuration and confirm the catalog loaded. Then sign out of the Essbase Admin user.
 
 ## Learn More
 

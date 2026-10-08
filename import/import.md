@@ -29,11 +29,9 @@ This lab assumes you have:
 
 1. Download and extract the [PeakGear Sporting Goods Data](files/peakgear-sales.zip) on your computer. This will be uploaded to Essbase to build the Sales Cube.
 
-2. Log in to Essbase as the workshop user created in Lab 1.
+2. Log in to Essbase as the **Workshop** user created in Lab 1.
 ![Essbase Login](images/essbase1.png)
-    > **Note:** If the Essbase user cannot sign-in to Essbase, return to Data Actions as the ADMIN user and refer to Lab 1 Task 3.
-
-You have launched embedded Essbase and verified the workshop user's sign-in.
+    > **Note:** If the Workshop user cannot sign-in to Essbase, return to Data Actions as the ADMIN user and refer to Lab 1 Task 3.
 
 3. On the Essbase home page select **Import**.
 ![Essbase Login](images/ess2.png)
@@ -53,13 +51,10 @@ You have launched embedded Essbase and verified the workshop user's sign-in.
 
 ## Task 2: Review the Import Job
 
-1. Open **Jobs** in Essbase and find the most recent import job for the PeakGear application.
-![Data Load in Data Studio 3](images/import4.png)
-
-2. Open the job details and confirm that the job completed successfully.
+1. Open **Jobs** in Essbase and find the most recent import job for the PeakGear application. Open the job details and confirm that the job completed successfully.
 ![Data Load in Data Studio 3](images/importtemp.png)
 
-3. If the job reports an error, review its details before continuing.
+2. If the job reports an error, review its details before continuing.
 ![Data Load in Data Studio 3](images/import6.png)
 
 ## Task 3: Inspect the Cube Outline
