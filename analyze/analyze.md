@@ -72,6 +72,8 @@ This lab assumes you have:
 ![SmartView](images/sv10.png)
 
 8. Provide a name for the data, such as `ADBS_PRES_SALES`, then click **Finish**.
+![SmartView](images/svtemo.png)
+
 
 9. Click **Connect** in the bottom right of the SmartView window. The data is now connected to SmartView
 ![SmartView](images/sv11.png)
