@@ -27,11 +27,22 @@ This lab assumes you have:
 
 ## Task 1: Launch Essbase from Data Studio
 
-1. On the Database Actions launchpad, select **Data Studio**.
+1. Return to your AI Lakehouse details page.
+![Essbase Login](images/ailh_2a.png)
 
-2. Select **Essbase**. Essbase will open in your browser.
+2. Click on **Tool Configuration** from the ribbon options.
+![Essbase Login](images/t1.png)
+
+3. Scroll down to **Essbase** then click **Edit**.
+![Essbase Login](images/t2.png)
+
+4. Toggle **Enable Essbase** on and click apply. You can configure the OCPU count and idle time here as well.
+![Essbase Login](images/t3.png)
+
+5. After AI Lakehouse finishes updating, copy the URL under Essbase and paste it in a new browser window. Once the Essbase login page appears, proceed to Task 2.
 
     > **Note:** Alternatively, launch Essbase by copying the Database actions URL from the search bar and replace `/ords/...` with `/essbase/jet`
+![Essbase Login](images/t4.png)
 
 ## Task 2: Verify the Essbase Home Page and Signed-In User
 
