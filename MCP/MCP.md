@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this optional lab, you will connect Codex to the Essbase MCP server embedded in your AI Lakehouse. You will use the read-only `viewer` profile based on your ESSBASEUSER created in Lab 1 to list the Essbase applications available to the user.
+In this optional lab, you will connect Codex to the Essbase MCP server embedded in your AI Lakehouse. You will use the read-only `viewer` profile based on your ESSBASEUSER created in Lab 1 to list the Essbase applications available to the user. Screenshots in this lab are based on MacOS, but Windows commands will be provided as well.
 
 Estimated Time: 20 minutes
 
@@ -53,13 +53,23 @@ This lab assumes you have:
 
 ## Task 2: Verify the Essbase MCP Endpoint
 
-1. In a terminal, run the following command. Replace the host and username with your values. Leave the username inside the quotes.
+1. In a terminal / powershell, run the following command. Replace `host-name` and `ESSBASEUSER` with your values. Leave the username inside the quotes.
 
+**Terminal (Mac):**
    ```bash
-   curl --fail-with-body --silent --show-error \
+   <copy>curl --fail-with-body --silent --show-error \
      --user 'ESSBASEUSER' \
-     'https://host-name/essbase/rest/v1/ess-mcp/tools?profile=viewer'
+     'https://host-name/essbase/rest/v1/ess-mcp/tools?profile=viewer'</copy>
    ```
+
+**Powershell (Windows):**
+```powershell
+<copy>curl.exe --fail-with-body --silent --show-error `
+  --user 'ESSBASEUSER' `
+  'https://host-name/essbase/rest/v1/ess-mcp/tools?profile=viewer'</copy>
+```
+
+> **Note:** Use `curl.exe` in PowerShell. The macOS command uses a backslash (`\`) to continue onto another line; PowerShell uses a backtick (`` ` ``). Do not put spaces after either continuation character. The URL must include `/tools` before `?profile=viewer`. Without `/tools`, the response describes the MCP server but does not list its tools.
 
 2. When `curl` prompts for a password, enter your Database password. The password will not appear as you type.
 ![MCP](images/ai2.png)
@@ -71,12 +81,14 @@ This lab assumes you have:
 
 ## Task 3: Make the Authorization Header Available to Codex
 
-Codex will read the complete HTTP `Authorization` header from an environment variable named `ESSBASE_MCP_AUTH`. The following command prompts for your credentials, creates the required `Basic` value, and makes it available to newly launched macOS apps.
+Codex will read the complete HTTP `Authorization` header from an environment variable named `ESSBASE_MCP_AUTH`. Use the steps for your operating system to create the required `Basic` value without displaying your password.
 
-1. Paste and run the **entire** block in Terminal without changing the Python code:
+1. Paste and run the **entire** block for your operating system. Type your Database username and password only when prompted. The password stays hidden.
+
+   **Terminal (Mac):**
 
    ```bash
-   if ESSBASE_MCP_AUTH="$(python3 -c '
+   <copy>if ESSBASE_MCP_AUTH="$(python3 -c '
    import base64
    import getpass
    import sys
@@ -90,16 +102,30 @@ Codex will read the complete HTTP `Authorization` header from an environment var
      launchctl setenv ESSBASE_MCP_AUTH "$ESSBASE_MCP_AUTH"
      unset ESSBASE_MCP_AUTH
      printf 'Authorization header set for new apps.\n'
-   fi
+   fi</copy>
    ```
 
-2. At `Database username:`, type your Essbase username and press **Return**. At `Database password:`, type your Essbase password and press **Return**. The password stays hidden.
+   **PowerShell (Windows):**
+
+   ```powershell
+   <copy>$dbUser = Read-Host 'Database username'
+   $securePassword = Read-Host 'Database password' -AsSecureString
+   $plainPassword = [System.Net.NetworkCredential]::new('', $securePassword).Password
+   $credentialBytes = [Text.Encoding]::UTF8.GetBytes($dbUser + ':' + $plainPassword)
+   $authHeader = 'Basic ' + [Convert]::ToBase64String($credentialBytes)
+   [Environment]::SetEnvironmentVariable('ESSBASE_MCP_AUTH', $authHeader, 'User')
+   [Array]::Clear($credentialBytes, 0, $credentialBytes.Length)
+   Remove-Variable dbUser, securePassword, plainPassword, credentialBytes, authHeader
+   Write-Host 'Authorization header set for newly launched apps.'</copy>
+   ```
+
+2. On both Windows and Mac, fully quit and reopen Codex so the app receives the new user environment variable.
 ![MCP](images/ai4.png)
 
-3. Confirm Terminal prints `Authorization header set for new apps.` Do not print the environment variable: its value contains your encoded credentials.
+3. Confirm the terminal prints `Authorization header set for new apps.` or `Authorization header set for newly launched apps.` Do not print the environment variable: its value contains your encoded credentials.
 ![MCP](images/ai5.png)
 
-> **Note:** Base64 encoding is not encryption. The macOS launch environment retains this value until you remove it or end the login session. Perform Task 5 when finished.
+> **Note:** Base64 encoding is not encryption. The macOS launch environment or Windows user environment retains this value until you remove it. Perform Task 5 when finished.
 
 ## Task 4: Add the Essbase MCP Server to Codex
 
@@ -111,13 +137,13 @@ Codex will read the complete HTTP `Authorization` header from an environment var
    |---|---|
    | Name | `Essbase Embedded AILH` |
    | Type | `Streamable HTTP` |
-   | URL | `https://<host-name>/essbase/rest/v1/ess-mcp?profile=viewer` |
+   | URL | `https://host-name/essbase/rest/v1/ess-mcp?profile=viewer` |
    | Bearer token env var | Leave blank |
    | Headers | Leave blank |
    | Headers from environment variables — Key | `Authorization` |
    | Headers from environment variables — Value | `ESSBASE_MCP_AUTH` |
 
-3. Replace `<host-namet>` in the URL with the host you found in Task 1, then **Save**.
+3. Replace `host-name` in the URL with the host you found in Task 1, then **Save**.
 ![MCP](images/aitemp.png)
 
 4. Fully quit and reopen Codex so its new process receives `ESSBASE_MCP_AUTH`.
@@ -134,13 +160,21 @@ Codex will read the complete HTTP `Authorization` header from an environment var
 
 ## Task 5: Remove the Credential After the Lab
 
-1. When you finish using the connection, remove the value from the macOS launch environment:
+1. When you finish using the connection, remove the credential using the command for your operating system.
+
+   **Terminal (macOS):**
 
    ```bash
-   launchctl unsetenv ESSBASE_MCP_AUTH
+   <copy>launchctl unsetenv ESSBASE_MCP_AUTH</copy>
    ```
 
-2. Fully quit and reopen Codex. To use the connection again in a later session, repeat Task 3 with your current Database credentials.
+   **PowerShell (Windows):**
+
+   ```powershell
+   <copy>[Environment]::SetEnvironmentVariable('ESSBASE_MCP_AUTH', $null, 'User')</copy>
+   ```
+
+2. Fully quit and reopen Codex. On Windows, sign out and sign back in to ensure newly launched apps no longer receive the credential. To use the connection again in a later session, repeat Task 3 with your current Database credentials.
 
 ## Learn More
 
