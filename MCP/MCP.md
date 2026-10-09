@@ -151,12 +151,24 @@ Codex will read the complete HTTP `Authorization` header from an environment var
 5. In a new Codex chat, enter:
 
    ```text
-   Using the Essbase Embedded AILH MCP server, run essbase_explore and list the Essbase applications available to me.
+   <copy>Using the Essbase Embedded AILH MCP server, run essbase_explore and list the Essbase applications available to me.<copy>
    ```
 
 6. Confirm the result lists the applications your Database user can access. PeakGear should appear if that user has permission to it in Essbase.
+![MCP](images/ai8.png)
 
-> **Troubleshooting:** If Codex reports an authentication error but Task 2 succeeded, check that `Authorization` is entered under **Headers from environment variables**, its value is exactly `ESSBASE_MCP_AUTH`, and Codex was fully quit and reopened after Task 3.
+7. In the same Codex chat, enter:
+
+```text
+   <copy>In application peakgear_sales, cube Sales, retrieve the Sales value at:
+- Time: 2021-01
+- Product: SKU-100002
+- Store: Store_004
+   Inspect the cube outline if needed, then query the exact cell.<copy>
+   ```
+
+8. Confirm the result shows the Sales value for the exact cell your Database user queried. The value should be 1,448.55 for Time 2021-01, Product SKU-100002, and Store Store_004 in the peakgear_sales application’s Sales cube. This value matches the results obtained in Smart View for the same Time, Product, and Store intersection.
+![MCP](images/ai9.png)
 
 ## Task 5: Remove the Credential After the Lab
 
