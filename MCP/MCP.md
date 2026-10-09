@@ -33,20 +33,20 @@ This lab assumes you have:
 1. Open the Essbase login page used earlier in this workshop. Its URL has this form:
 
    ```text
-   https://essbase-host/essbase/jet/login.html
+   https://.../essbase/jet/login.html
    ```
 
 2. Copy only the host name between `https://` and `/essbase`. Build the read-only MCP URL and save it for Task 4:
 
    ```text
-   https://essbase-host/essbase/rest/v1/ess-mcp?profile=viewer
+   https://host-name/essbase/rest/v1/ess-mcp?profile=viewer
    ```
 ![MCP](images/ai1.png)
 
 3. Build the tool-catalog URL for the verification step in Task 2:
 
    ```text
-   https://essbase-host/essbase/rest/v1/ess-mcp/tools?profile=viewer
+   https://host-name/essbase/rest/v1/ess-mcp/tools?profile=viewer
    ```
 
 > **Note:** Use the host URL from the **Essbase login page**, not the `dataaccess.adb.../adb/mcp/v1/databases/...` URL for the Autonomous AI Database MCP server.
@@ -58,7 +58,7 @@ This lab assumes you have:
    ```bash
    curl --fail-with-body --silent --show-error \
      --user 'ESSBASEUSER' \
-     'https://essbase-host/essbase/rest/v1/ess-mcp/tools?profile=viewer'
+     'https://host-name/essbase/rest/v1/ess-mcp/tools?profile=viewer'
    ```
 
 2. When `curl` prompts for a password, enter your Database password. The password will not appear as you type.
@@ -111,13 +111,13 @@ Codex will read the complete HTTP `Authorization` header from an environment var
    |---|---|
    | Name | `Essbase Embedded AILH` |
    | Type | `Streamable HTTP` |
-   | URL | `https://<essbase-host>/essbase/rest/v1/ess-mcp?profile=viewer` |
+   | URL | `https://<host-name>/essbase/rest/v1/ess-mcp?profile=viewer` |
    | Bearer token env var | Leave blank |
    | Headers | Leave blank |
    | Headers from environment variables — Key | `Authorization` |
    | Headers from environment variables — Value | `ESSBASE_MCP_AUTH` |
 
-3. Replace `<essbase-host>` in the URL with the host you found in Task 1, then **Save**.
+3. Replace `<host-namet>` in the URL with the host you found in Task 1, then **Save**.
 ![MCP](images/aitemp.png)
 
 4. Fully quit and reopen Codex so its new process receives `ESSBASE_MCP_AUTH`.
