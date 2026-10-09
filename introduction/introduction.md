@@ -8,7 +8,7 @@ Two optional labs extend the exercise. With Oracle Smart View, you can compare S
 
 This workshop runs in your own Oracle Cloud tenancy. Your Autonomous AI Lakehouse must already be configured; provisioning is outside the scope of these labs.
 
-Estimated Workshop Time: ## hours ## minutes
+Estimated Workshop Time: 1 hours 50 minutes
 
 ### Objectives
 
