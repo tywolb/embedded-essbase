@@ -53,7 +53,7 @@ This lab assumes you have:
 
 ## Task 2: Verify the Essbase MCP Endpoint
 
-1. In a terminal / powershell, run the following command. Replace `host-name` and `ESSBASEUSER` with your values. Leave the username inside the quotes.
+1. In a Terminal / Powershell, run the following command. Replace `host-name` and `ESSBASEUSER` with your values. Leave the username inside the quotes.
 
 **Terminal (Mac):**
    ```bash
