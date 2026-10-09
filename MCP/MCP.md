@@ -144,6 +144,5 @@ Codex will read the complete HTTP `Authorization` header from an environment var
 
 ## Learn More
 
-- [Connect an AI Client to the Essbase MCP Server](https://docs.oracle.com/en/database/other-databases/essbase/26/esmcp/connect-ai-client.html)
 - [Essbase MCP Access Profiles](https://docs.oracle.com/en/database/other-databases/essbase/26/esmcp/mcp-access-profiles.html)
 - [Configure MCP Servers in Codex](https://developers.openai.com/codex/mcp)
