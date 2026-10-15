@@ -8,24 +8,27 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Lab 1: Check existing Lakehouse and prepare access",
-      "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+      "title": "Lab 1: Provision an ADB Instance",
+      "filename": "../../provision/provision.md"
+    },
+    {
+      "title": "Lab 2: Check existing Lakehouse and prepare access",
       "filename": "../../check/check.md"
     },
     {
-      "title": "Lab 2: Launch Embedded Essbase",
+      "title": "Lab 3: Launch Embedded Essbase",
       "filename": "../../launch/launch.md"
     },
     {
-      "title": "Lab 3: Import the prepared application",
+      "title": "Lab 4: Import the prepared application",
       "filename": "../../import/import.md"
     },
     {
-      "title": "Lab 4: Analyze and Investigate",
+      "title": "Lab 5: Analyze and Investigate",
       "filename": "../../analyze/analyze.md"
     },
     {
-        "title": "Lab 5: Connect through MCP",
+        "title": "Lab 6: Connect through MCP",
         "filename": "../../MCP/MCP.md"
     },
     {

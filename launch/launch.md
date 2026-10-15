@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will open embedded Essbase from Database Actions and sign-in with the Essbase user created in Lab 1. You will confirm that the Essbase home page is available before importing the PeakGear Sporting Goods application in the next lab.
+In this lab, you will open embedded Essbase from Database Actions and sign-in with the Essbase user created in Lab 2. You will confirm that the Essbase home page is available before importing the PeakGear Sporting Goods application in the next lab.
 
 Estimated Lab Time: 10 minutes
 
@@ -23,7 +23,7 @@ In this lab, you will:
 This lab assumes you have:
 
 - Access to the existing Autonomous AI Lakehouse with embedded Essbase enabled.
-- The workshop user's Database Actions URL, username, and password from Lab 1.
+- The workshop user's Database Actions URL, username, and password from Lab 2.
 
 ## Task 1: Launch Essbase from AI Lakehouse
 

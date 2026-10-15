@@ -24,7 +24,7 @@ This lab assumes you have:
 
 - Microsoft Excel with a compatible Oracle Smart View for Office installation.
 - The workshop user's Essbase credentials.
-- The PeakGear cube imported with data in Lab 3.
+- The PeakGear cube imported with data in Lab 4.
 
 
 
@@ -65,7 +65,7 @@ This lab assumes you have:
 
 ![SmartView](images/sv8.png)
 
-6. You will be prompted to sign in to Essbase. Use the Essbase user credentials from Lab 1.
+6. You will be prompted to sign in to Essbase. Use the Essbase user credentials from Lab 2.
 ![SmartView](images/sv9.png)
 
 7. Select the database to view in SmartView. Drill into the Sales database by clicking the + next to **Servers → EssbaseCluster → peakgear_sales → Sales** then click **Next**.

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will locate your existing Oracle Autonomous AI Lakehouseas as an ADMIN user and create an Essbase user with the necessary permissions. You will then sign in as said Essbase user to confirm access to Database Actions and Data Studio.
+In this lab, you will locate the Oracle Autonomous AI Lakehouse created in Lab 1 as the ADMIN user and create an Essbase user with the necessary permissions. You will then sign in as said Essbase user to confirm access to Database Actions and Data Studio.
 
 Estimated Time: 35 minutes
 
@@ -14,7 +14,7 @@ Database Actions is a browser-based interface for working with your Autonomous A
 
 In this lab, you will:
 
-- Locate an existing Autonomous AI Lakehouse in your tenancy.
+- Locate the Autonomous AI Lakehouse created in Lab 1 in your tenancy.
 - Open Database Actions using the database ADMIN credentials.
 - Create a user with Web Access and the Essbase Power User role.
 - Verify that the Essbase user can sign in.
@@ -23,24 +23,22 @@ In this lab, you will:
 
 This lab assumes you have:
 
-- An existing Autonomous AI Lakehouse.
+- The Autonomous AI Lakehouse created in Lab 1, with lifecycle state **Available**.
 - An OCI ADMIN account that can view the AI Lakehouse in the Console.
 - Access to Database Actions in AI Lakehouse.
 
 ## Task 1: Locate the Existing Autonomous AI Lakehouse
 
-1. [Sign in to Oracle Cloud](https://www.oracle.com/cloud/sign-in.html)
-
-2. Open the hamburger menu in the top left corner and select **Oracle AI Database**, then **Autonomous AI Database**.
+1. Within OCI, Open the hamburger menu in the top left corner and select **Oracle AI Database**, then **Autonomous AI Database**.
 ![OCI navigation menu with Autonomous AI Database highlighted](images/ailh_step1.png)
 
-3. Select the region and compartment where your Autonomous AI Lakehouse instance is located.
+2. Select the region and compartment where your Autonomous AI Lakehouse instance is located.
 ![OCI navigation Compartment Region](images/ailh_2.png)
 
-4. Find your AI Lakehouse in the database list. Confirm the database name and the lifecycle state is **Available**.
+3. Find the AI Lakehouse you created in Lab 1, such as **ESSBASELAB**, in the database list. Confirm the database name and the lifecycle state is **Available**.
 ![OCI navigation menu with Autonomous AI Database Available](images/ailh_2b.png)
 
-5. Click on the AI Lakehouse to access the database details page.
+4. Click on the AI Lakehouse to access the database details page.
 ![OCI navigation menu Select Autonomous AI Database](images/ailh_2a.png)
 
 ## Task 2: Open Database Actions

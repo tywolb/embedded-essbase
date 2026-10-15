@@ -29,9 +29,9 @@ This lab assumes you have:
 
 1. Download and extract the [PeakGear Sporting Goods Data](files/peakgear-sales.zip) on your computer. This will be uploaded to Essbase to build the Sales Cube.
 
-2. Log in to Essbase as the **Workshop** user created in Lab 1.
+2. Log in to Essbase as the **Workshop** user created in Lab 2.
 ![Essbase Login](images/essbase1.png)
-    > **Note:** If the Workshop user cannot sign-in to Essbase, return to Data Actions as the ADMIN user and refer to Lab 1 Task 3.
+    > **Note:** If the Workshop user cannot sign-in to Essbase, return to Data Actions as the ADMIN user and refer to Lab 2 Task 3.
 
 3. On the Essbase home page select **Import**.
 ![Essbase Login](images/ess2.png)
