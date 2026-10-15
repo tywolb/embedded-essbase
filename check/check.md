@@ -72,7 +72,7 @@ This lab assumes you have:
 5. Enable **REST, GraphQL, MongoDB API, and Web Access** for the new user.
 ![Enable REST](images/ailh_8c.png)
 
-6. Open **Granted Roles**. For both **DWROLE** and **ESSBASE_POWER_USER** Grant and set to Default so the user can access the Data Studio tools used in this workshop. Confirm that both **CONNECT** and **RESOURCE** are Granted and Default as well.
+6. Open **Granted Roles**. For both **DWROLE** and **ESSBASEPOWERUSER** Grant and set to Default so the user can access the Data Studio tools used in this workshop. Confirm that both **CONNECT** and **RESOURCE** are Granted and Default as well.
 ![Enable Granted Roles](images/temp3.png)
 
 7. Select **Create User** and confirm that Database Actions reports that the user was created.
