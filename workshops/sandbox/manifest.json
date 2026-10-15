@@ -12,7 +12,7 @@
       "filename": "../../provision/provision.md"
     },
     {
-      "title": "Lab 2: Check existing Lakehouse and prepare access",
+      "title": "Lab 2: Check ADB and prepare access",
       "filename": "../../check/check.md"
     },
     {
@@ -20,11 +20,11 @@
       "filename": "../../launch/launch.md"
     },
     {
-      "title": "Lab 4: Import the prepared application",
+      "title": "Lab 4: Import the application",
       "filename": "../../import/import.md"
     },
     {
-      "title": "Lab 5: Analyze and Investigate",
+      "title": "Lab 5: Analyze through SmartView",
       "filename": "../../analyze/analyze.md"
     },
     {

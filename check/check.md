@@ -1,4 +1,4 @@
-# Check the Existing Lakehouse and Prepare Access
+# Check the Existing ADB and Prepare Access
 
 ## Introduction
 

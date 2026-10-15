@@ -8,7 +8,7 @@ Two optional labs extend the exercise. With Oracle Smart View, you can compare S
 
 This workshop runs in your own Oracle Cloud tenancy.
 
-Estimated Workshop Time: 1 hour 55 minutes
+Estimated Workshop Time: 2 hours 30 minutes
 
 ### Objectives
 

@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this optional lab, you will connect Oracle Smart View to the PeakGear cube, compare sales by period, product, and store, and drill through from a cube summary to the supporting Lakehouse transaction records.
+In this optional lab, you will connect Oracle SmartView to the PeakGear cube, compare sales by period, product, and store, and drill through from a cube summary to the supporting Lakehouse transaction records.
 
 Estimated Time: 25 minutes
 
-### About Smart View and Drill-Through
+### About SmartView and Drill-Through
 
-Smart View lets you analyze Essbase data in Microsoft Excel. A drill-through report can show the detailed source records behind a cube value when an Essbase datasource and drillable region have been configured for the cube.
+SmartView lets you analyze Essbase data in Microsoft Excel. A drill-through report can show the detailed source records behind a cube value when an Essbase datasource and drillable region have been configured for the cube.
 
 ### Objectives
 
@@ -22,13 +22,13 @@ In this lab, you will:
 
 This lab assumes you have:
 
-- Microsoft Excel with a compatible Oracle Smart View for Office installation.
+- Microsoft Excel with a compatible Oracle SmartView for Office installation.
 - The workshop user's Essbase credentials.
 - The PeakGear cube imported with data in Lab 4.
 
 
 
-## Task 1: Download and Install Smart View
+## Task 1: Download and Install SmartView
 
 1. Close Excel and all other Microsoft Office applications.
 2. Open the [Oracle Smart View for Office download page](https://www.oracle.com/middleware/technologies/epm-smart-view-downloads.html).
@@ -56,10 +56,10 @@ This lab assumes you have:
 3. In the SmartView Panel select the drop down arrow then **Create new connection**.
 ![SmartView](images/sv6.png)
 
-4. Select **Smart View HTTP Provider**.
+4. Select **SmartView HTTP Provider**.
 ![SmartView](images/sv7.png)
 
-5. Enter the Smart View URL to connect. You can set this as the default connection if you would like to.
+5. Enter the SmartView URL to connect. You can set this as the default connection if you would like to.
 
 > **Note:** Copy your Essbase URL, remove every character after /essbase and add /smartview. Link should be formatted as https://<essbase-host>/essbase/smartview
 
