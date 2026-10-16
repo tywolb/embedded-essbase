@@ -30,24 +30,24 @@ This lab assumes you have:
 ## Task 1: Locate the Existing Autonomous AI Lakehouse
 
 1. Within OCI, open the hamburger menu in the top left corner and select **Oracle AI Database**, then **Autonomous AI Database**.
-![OCI navigation menu with Autonomous AI Database highlighted](images/ailh_step1.png)
+![OCI navigation menu with Oracle AI Database and Autonomous AI Database highlighted](images/ailh_step1.png)
 
 2. Select the region and compartment where your Autonomous AI Lakehouse instance is located.
-![OCI navigation Compartment Region](images/ailh_2.png)
+![Autonomous AI Databases page with the selected region and compartment highlighted](images/ailh_2.png)
 
 3. Find the AI Lakehouse you created in Lab 1, such as **ESSBASELAB**, in the database list. Confirm the database name and the lifecycle state is **Available**.
-![OCI navigation menu with Autonomous AI Database Available](images/ailh_2b.png)
+![Database list with the Lakehouse instance Available status highlighted](images/ailh_2b.png)
 
 4. Click on the AI Lakehouse to access the database details page.
-![OCI navigation menu Select Autonomous AI Database](images/ailh_2a.png)
+![Database list with the Lakehouse instance name highlighted for selection](images/ailh_2a.png)
 
 ## Task 2: Open Database Actions
 
 1. On the details page, open the **Database actions** menu and select **View all database actions**.
-![OCI navigation menu to DB Actions](images/ailh_3.png)
+![Database details page with the Database actions menu open and View all database actions highlighted](images/ailh_3.png)
 
 2. If prompted, sign in as the database **ADMIN** user.
-![DB Actions Sign In](images/ailh_4.png)
+![Database Actions sign-in form with ADMIN username, masked password, and Sign in button](images/ailh_4.png)
 
 3. Confirm that the Database Actions launchpad opens and **Admin** is in the top right. Locate the **Data Studio** area and its available tools. This will be used later in the workshop.
 
@@ -56,35 +56,35 @@ This lab assumes you have:
 ## Task 3: Create and Enable the Workshop Database User
 
 1. In Database Actions, open the hamburger menu in the top left corner. Under **Administration**, select **Database Users**.
-![DB Users](images/ailh_6.png)
+![Database Actions menu with Administration and Database Users highlighted](images/ailh_6.png)
 
 2. Select **Create User**.
-![Add Users](images/ailh_7.png)
+![Database Users page with Create User button highlighted](images/ailh_7.png)
 
 3. Enter a username for the workshop user and create a password that meets the displayed requirements. Keep the credentials saved for future use.
-![Credential Configuration](images/ailh_8a.png)
+![Create User panel with username and password fields highlighted](images/ailh_8a.png)
 
 4. Set the **Quota on tablespace DATA** to the amount approved for your workshop environment. The minimum of 25M is enough for the scope of this workshop.
-![Credential Configuration 2](images/ailh_8b.png)
+![Create User panel with DATA tablespace quota set to 25M](images/ailh_8b.png)
 
 5. Enable **REST, GraphQL, MongoDB API, and Web Access** for the new user.
-![Enable REST](images/ailh_8c.png)
+![Create User panel with REST, GraphQL, MongoDB API, and Web access switches enabled](images/ailh_8c.png)
 
 6. Open **Granted Roles**. For both **DWROLE** and **ESSBASEPOWERUSER** Grant and set to Default so the user can access the Data Studio tools used in this workshop. Confirm that both **CONNECT** and **RESOURCE** are Granted and Default as well.
-![Enable Granted Roles](images/temp3.png)
+![Granted Roles tab showing DWROLE and ESSBASE_POWER_USER selected in Granted and Default columns](images/temp3.png)
 
 7. Select **Create User** and confirm that Database Actions reports that the user was created.
 
 8. Find the new user's card on the **Database Users** page. Confirm that the account is open and shows **REST Enabled**.
-![Confirm User / REST enabled](images/aidp_10.png)
+![Database Users page showing ESSBASEUSER account with REST Enabled badge](images/aidp_10.png)
 
 ## Task 4: Sign In as the Workshop User and Verify Access
 
 1. Sign out of the **ADMIN** session, or open a separate private browser window.
-![Sign Out of Admin](images/ailh_11.png)
+![ADMIN profile menu open with Sign Out highlighted](images/ailh_11.png)
 
 2. Sign in with the Essbase user's credentials from Task 3 to test the credentials.
-![Sign In to Essbase User](images/ailh_12.png)
+![Database Actions sign-in form with ESSBASEUSER username, masked password, and Sign in button](images/ailh_12.png)
 
 3. Keep the credentials saved for the next lab.
 

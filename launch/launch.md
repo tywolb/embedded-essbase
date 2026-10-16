@@ -28,55 +28,55 @@ This lab assumes you have:
 ## Task 1: Launch Essbase from AI Lakehouse
 
 1. Return to your AI Lakehouse details page.
-![Essbase Login](images/ailh_2a.png)
+![Autonomous AI Databases list with the available Lakehouse instance highlighted](images/ailh_2a.png)
 
 2. Click on **Tool Configuration** from the ribbon options.
-![Essbase Login](images/t1.png)
+![Autonomous AI Database details page with Tool configuration tab highlighted](images/t1.png)
 
 3. Scroll down to **Essbase** then click **Edit**.
-![Essbase Login](images/t2.png)
+![Tool configuration page with Essbase Edit button highlighted](images/t2.png)
 
 4. Toggle on **Enable Essbase** and click apply. You can configure the OCPU count and idle time here as well.
-![Essbase Login](images/t3.png)
+![Configure tools panel with Enable Essbase switch and Apply button highlighted](images/t3.png)
 
 5. After AI Lakehouse finishes updating, copy the URL under Essbase and paste it in a new browser window.
-![Essbase Login](images/t4.png)
+![Enabled Essbase section with Copy button beside its public access URL](images/t4.png)
 
 6. On the Essbase sign-in page, enter the database **ADMIN** credentials.
-![Essbase Login](images/temp6.png)
+![Essbase sign-in form with ADMIN entered as the user name](images/temp6.png)
 
 7. Select **Sign In**. Essbase will take a few minutes to provision when the first user logs in. After provisioning starts proceed to Task 2.
 
 ## Task 2: Catalog Object Storage Configuration
 
 1. While Essbase provisions, go back to your OCI console tab. Click the **Navigation Menu** in the top left then **Storage → Buckets**.
-![Object Storage](images/ob1.png)
+![OCI navigation menu with Storage and Buckets highlighted](images/ob1.png)
 
 2. Select the compartment designated for the lab, then click **Create bucket**.
-![Object Storage](images/ob2.png)
+![Buckets page with compartment filter and Create bucket button highlighted](images/ob2.png)
 
 3. Enter a unique name, such as `essbase-embedded-ailakehouse-catalog`. Select the **Standard** storage tier and leave the rest as default, then click **Create Bucket**.
-![Object Storage](images/ob3.png)
+![Create bucket form with bucket name, Standard tier, and Create bucket button highlighted](images/ob3.png)
 
 4. Open the new bucket. Record its **Bucket name** and **Namespace** from the bucket details. Essbase needs the bucket name, not the bucket OCID.
-![Object Storage](images/ob4.png)
+![Bucket details page showing the bucket name and Object Storage namespace](images/ob4.png)
 
 5. Open the OCI profile menu for the user whose API signing key will access the bucket, then select **User settings** and copy the **User OCID**. This user may differ from the bucket creator, but must have access to the bucket.
-![Object Storage](images/ob5.png)
-![Object Storage](images/ob6.png)
+![OCI profile menu with User settings highlighted](images/ob5.png)
+![User profile page with Copy button beside the user OCID](images/ob6.png)
 
 6. On the same user page, open **Tokens and keys**. If you already have the matching private key file, copy its **Fingerprint** and skip Step 7 and 8. Otherwise, click **Add API Key**.
-![Object Storage](images/ob7.png)
+![Tokens and keys tab with Add API key button highlighted](images/ob7.png)
 
 7. Download the new **private key** `.pem` file, then click **Add**.
-![Object Storage](images/ob8.png)
+![Add API key panel with Download private key and Add button highlighted](images/ob8.png)
 
 8. Copy the displayed fingerprint under **Fingerprint**. Keep the private key in a secure location.
-![Object Storage](images/ob9.png)
+![API keys list with the key fingerprint highlighted](images/ob9.png)
 
 9. Open the profile menu and select your tenancy name. Copy the **Tenancy OCID**.
-![Object Storage](images/ob10.png)
-![Object Storage](images/ob11.png)
+![OCI profile menu with tenancy name highlighted](images/ob10.png)
+![Tenancy details page with Copy button beside the tenancy OCID](images/ob11.png)
 
 10. Return to Essbase as **Admin** user and click **Configure** to add **Catalog Object Storage**.
 

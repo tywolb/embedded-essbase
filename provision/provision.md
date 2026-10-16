@@ -23,13 +23,13 @@ In this lab, you will:
 
 1. Open the **Navigation** menu.
 
-    ![Open the Navigation menu.](images/open-navigation-menu.png =65%x*)
+    ![OCI Console home page with the navigation menu button outlined at the top left](images/open-navigation-menu.png =65%x*)
 
 2. Under **Oracle AI Database**, click **Autonomous AI Database**.
 
     The **Autonomous AI Databases** page is displayed.
 
-    ![The Autonomous Databases page is displayed.](images/adb-show-compartment-button.png =65%x*)
+    ![Autonomous AI Databases page with the Compartment filter outlined above the database list](images/adb-show-compartment-button.png =65%x*)
 
     OCI resources are organized into compartments. Click the **Compartment** field to select the compartment where you want to create your Autonomous Database.
 
@@ -37,17 +37,17 @@ In this lab, you will:
 
 3. You can use the **Search and Filter** field to control the list of Autonomous Databases that are displayed on the page. This is useful when you are managing many Autonomous Databases. For example, you can use **Workload type** to filter the Autonomous Database list by selecting your workload type. You can also use the **State** filter to view databases that are `available`, `stopped`, `terminated` and much more.
 
-    ![Database list.](images/search-and-filter.png =65%x*)
+    ![Search and Filter menu showing Tags, Workload type, and State filters](images/search-and-filter.png =65%x*)
 
 4. Confirm the **region** in the top-right corner of the page. Use this region and the selected compartment throughout the workshop.
 
-    ![Select region on the far upper-right corner of the page.](./images/oci-region-list.png =65%x*)
+    ![OCI region selector showing US East (Ashburn) in the top navigation bar](./images/oci-region-list.png =65%x*)
 
 ## Task 2: Create the Autonomous AI Database Instance
 
 1. On the **Autonomous AI Databases** page, select your desired **region** and **compartment**. Click **Create Autonomous AI Database** to start the instance creation process. The **Create Autonomous AI Database Serverless** page is displayed.
 
-    ![Click Create Autonomous AI Database.](images/click-create-new-adb.png =65%x*)
+    ![Autonomous AI Databases page with the Create Autonomous AI Database button highlighted](images/click-create-new-adb.png =65%x*)
 
 2. Specify the following:
 
@@ -55,7 +55,7 @@ In this lab, you will:
     - **Database Name**: Use letters and numbers only, starting with a letter. Maximum length is 30 characters. _Underscores are not supported_. For this lab, use **ESSBASELAB**.
     - **Compartment**: Select your compartment from the drop-down list.
 
-        ![Enter the required details.](./images/adb-create-screen-names.png =65%x*)
+        ![Create Autonomous AI Database form with Display name, Database name, and Compartment fields](./images/adb-create-screen-names.png =65%x*)
 
     >**Note:** Ensure that you use the suggested database names as instructed in this step, and not those shown in the screenshots.
 
@@ -68,7 +68,7 @@ In this lab, you will:
 
     For this workshop, select **Lakehouse**.
 
-    ![Choose a workload type.](images/adb-create-screen-workload.png =75%x*)
+    ![Workload type choices with Lakehouse selected](images/adb-create-screen-workload.png =75%x*)
 
 4. In the **Database configuration** section, specify the following:
 
@@ -80,7 +80,7 @@ In this lab, you will:
     - **Storage (TB)**: Select your storage capacity in terabytes. For this lab, specify **1 TB** of storage.
     - **Storage auto scaling**: For this lab, there is no need to enable storage auto scaling, which would allow the system to expand up to three times the reserved storage. Accept the default which is disabled.
 
-        ![Choose the remaining parameters.](./images/adb-create-database-configuration.png =75%x*)
+        ![Database configuration showing version 26ai, 2 ECPUs, autoscaling control, and 1 TB storage](./images/adb-create-database-configuration.png =75%x*)
 
         >**Note:** You can drill down on the **Advanced options** option to take advantage of database consolidation savings with **elastic pools** or to use your organization's on-premise licenses with **bring your own license**.
 
@@ -88,7 +88,7 @@ In this lab, you will:
     - **Automatic backup retention period in days:** You can either accept the default value or specify your own preferred backup retention days value. For this lab, accept the default of `60` days.
     - **Immutable backup retention:** Accept the disabled default selection.
 
-    ![Choose backup retention.](./images/choose-backup-retention.png =75%x*)
+    ![Backup settings showing 60-day automatic retention and backup retention lock off](./images/choose-backup-retention.png =75%x*)
 
 6. In the **Administrator credentials creation** section, specify the following:
 
@@ -96,7 +96,7 @@ In this lab, you will:
     - **Password:** Create a unique password for the **`ADMIN`** user that meets the requirements displayed in OCI. _**Important:** Make a note of this **password** as you will need it to perform later tasks._
     - **Confirm password:** Confirm your password.
 
-        ![Enter password and confirm password.](./images/adb-create-screen-password.png =75%x*)
+        ![Administrator credentials section with ADMIN username and masked password fields](./images/adb-create-screen-password.png =75%x*)
 
 7. In the **Network access** section, select one of the following options:
     - For this lab, accept the default selection, **Secure access from everywhere**.
@@ -104,17 +104,17 @@ In this lab, you will:
     - If you want to restrict access to a private endpoint within an OCI VCN, select **Private endpoint access only** in the Choose network access area.
     - If the **Require mutual TLS (mTLS) authentication** option is selected, mTLS will be required to authenticate connections to your Autonomous AI Database. TLS connections allow you to connect to your Autonomous AI Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
 
-        ![Choose the network access.](./images/adb-create-network-access.png =65%x*)
+        ![Network access choices with Secure access from everywhere selected and mutual TLS off](./images/adb-create-network-access.png =65%x*)
 
 8. In the **Contacts for operational notifications and announcements** section, provide a contact email address. The **Contact email** field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
 
-    ![Provide a contact email address.](images/adb-create-contact-email.png =65%x*)
+    ![Contact email field and Create button on the database creation form](images/adb-create-contact-email.png =65%x*)
 
 9. Click **Create**.
 
 10. The **Autonomous AI Database details** page is displayed. The status of your ADB instance is **`Provisioning`**.
 
-    ![Database Provisioning message.](./images/adb-create-provisioning-message-new.png =75%x*)
+    ![Database details showing Provisioning status and a guided tour dialog with Skip tour button](./images/adb-create-provisioning-message-new.png =75%x*)
 
     A **Check database lifecycle state** informational box is displayed. You can navigate through this tour or choose to skip it. Click **Skip tour**. A **Skip guided tour** dialog box is displayed. Click **Skip**.
 
@@ -122,21 +122,21 @@ In this lab, you will:
 
     >**Note:** In the following screen sample, the database display name is **`Training-Database`** and the database name is **`TrainingDatabase`**. _In your example, your **database display name** and **database name** might be different_.
 
-    ![Database complete message.](./images/adb-created.png =75%x*)
+    ![Database details showing the Available state, database name, and Lakehouse workload](./images/adb-created.png =75%x*)
 
 11. Click the **Autonomous AI Databases** link in the top left of the page. The **Autonomous AI Database** page is displayed.
 
-    ![Click left arrow.](./images/click-left-arrow.png =75%x*)
+    ![Autonomous AI Databases back link at the top of the database details page](./images/click-left-arrow.png =75%x*)
 
     Your new Autonomous AI Database instance is displayed.
 
     In the following sample screen capture, the instance display name is **`Training-Database`**.
 
-    ![Click left arrow.](./images/adb-home-page.png =75%x*)
+    ![Autonomous AI Databases list showing the newly created Lakehouse database as Available](./images/adb-home-page.png =75%x*)
 
 12. An email message is sent to the contact email that you provided. The email contains useful links that you can use to launch Database Actions, view the Get Started with Autonomous AI Database Web page, and access the online forums to post a question and collaborate with other Autonomous AI Database experts.
 
-    ![provisioning email sent.](./images/provisioning-email-generic.png =65%x*)
+    ![Oracle Autonomous Database provisioning email with a Launch Database Actions button and getting started links](./images/provisioning-email-generic.png =65%x*)
 
 Record the database name, region, compartment, and ADMIN credentials. Continue to **Lab 2: Check existing Lakehouse and prepare access**.
 
