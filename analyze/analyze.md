@@ -95,3 +95,8 @@ This lab assumes you have:
 ![SmartView](images/sv13.png)
 
 3. Select each final member and click **Keep Only**. Confirm the resulting sales value is **1,448.55**. You have now performed Ad Hoc Analysis in Excel through SmartView.
+
+## Acknowledgements
+
+* **Author** - Ty Wolber, Cloud Engineer
+* **Last Updated By/Date** - Ty Wolber, October 2026

@@ -108,8 +108,6 @@ In this lab, you will:
 
 8. In the **Contacts for operational notifications and announcements** section, provide a contact email address. The **Contact email** field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
 
-    ![Contact email field and Create button on the database creation form](images/adb-create-contact-email.png =65%x*)
-
 9. Click **Create**.
 
 10. The **Autonomous AI Database details** page is displayed. The status of your ADB instance is **`Provisioning`**.

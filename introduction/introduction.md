@@ -32,6 +32,10 @@ For optional Lab 5, you need a compatible Microsoft Excel and Oracle Smart View 
 
 For optional Lab 6, you need a MCP-compatible AI client with the connection and authentication details for your Essbase environment.
 
+## Task 1: Review the Workshop Flow
+
+1. Review the labs in the workshop menu, then select **Get Started** to sign in to your Oracle Cloud tenancy.
+
 ## Learn More
 
 - [Using Data Studio with Autonomous AI Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/adp-data-studio-overview-page.html)

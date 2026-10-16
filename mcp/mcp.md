@@ -192,3 +192,8 @@ Codex will read the complete HTTP `Authorization` header from an environment var
 
 - [Essbase MCP Access Profiles](https://docs.oracle.com/en/database/other-databases/essbase/26/esmcp/mcp-access-profiles.html)
 - [Configure MCP Servers in Codex](https://developers.openai.com/codex/mcp)
+
+## Acknowledgements
+
+* **Author** - Ty Wolber, Cloud Engineer
+* **Last Updated By/Date** - Ty Wolber, October 2026
