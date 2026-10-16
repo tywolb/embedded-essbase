@@ -4,15 +4,20 @@
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "The Introduction is always second for LiveLabs. The title and contents menu title match for the Introduction.",
+      "description": "Introduction to the Essbase on AI Lakehouse workshop.",
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Lab 1: Provision an ADB Instance",
+      "title": "Get Started",
+      "description": "Sign in to your Oracle Cloud tenancy.",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Provision an Oracle Autonomous AI Database",
       "filename": "../../provision/provision.md"
     },
     {
-      "title": "Lab 2: Check ADB and prepare access",
+      "title": "Lab 2: Check the Existing ADB and Prepare Access",
       "filename": "../../check/check.md"
     },
     {
@@ -20,7 +25,7 @@
       "filename": "../../launch/launch.md"
     },
     {
-      "title": "Lab 4: Import the application",
+      "title": "Lab 4: Import the Prepared PeakGear Application",
       "filename": "../../import/import.md"
     },
     {
@@ -34,12 +39,7 @@
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
-    },
-    {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }

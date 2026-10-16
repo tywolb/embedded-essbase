@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will open embedded Essbase from Database Actions and sign-in with the Essbase user created in Lab 2. You will confirm that the Essbase home page is available before importing the PeakGear Sporting Goods application in the next lab.
+In this lab, you will enable embedded Essbase from the OCI Console, sign in as the database ADMIN user for the initial setup, and then verify access with the Essbase user created in Lab 2. You will confirm that the Essbase home page is available before importing the PeakGear Sporting Goods application in the next lab.
 
-Estimated Lab Time: 10 minutes
+Estimated Time: 10 minutes
 
 ### About Essbase
 
@@ -14,7 +14,7 @@ Essbase provides multidimensional cubes for analyzing business data. In this wor
 
 In this lab, you will:
 
-- Launch Essbase from Data Studio.
+- Launch Essbase from the OCI Console.
 - Sign in to Essbase and verify that it provisioned properly.
 - Confirm the Import action is available for the Essbase user.
 
@@ -22,8 +22,8 @@ In this lab, you will:
 
 This lab assumes you have:
 
-- Access to the existing Autonomous AI Lakehouse with embedded Essbase enabled.
-- The workshop user's Database Actions URL, username, and password from Lab 2.
+- Access to the existing Autonomous AI Lakehouse and permission to enable embedded Essbase.
+- OCI Console access, the database ADMIN credentials, and the workshop user's credentials from Labs 1 and 2.
 
 ## Task 1: Launch Essbase from AI Lakehouse
 
@@ -42,7 +42,7 @@ This lab assumes you have:
 5. After AI Lakehouse finishes updating, copy the URL under Essbase and paste it in a new browser window.
 ![Essbase Login](images/t4.png)
 
-6. On the Essbase sign-in page, enter the **Admin** Credentials.
+6. On the Essbase sign-in page, enter the database **ADMIN** credentials.
 ![Essbase Login](images/temp6.png)
 
 7. Select **Sign In**. Essbase will take a few minutes to provision when the first user logs in. After provisioning starts proceed to Task 2.
@@ -61,14 +61,14 @@ This lab assumes you have:
 4. Open the new bucket. Record its **Bucket name** and **Namespace** from the bucket details. Essbase needs the bucket name, not the bucket OCID.
 ![Object Storage](images/ob4.png)
 
-5. Open your profile menu and select **User settings**. Copy the **User OCID**. This must be the OCI user who created the bucket.
+5. Open the OCI profile menu for the user whose API signing key will access the bucket, then select **User settings** and copy the **User OCID**. This user may differ from the bucket creator, but must have access to the bucket.
 ![Object Storage](images/ob5.png)
 ![Object Storage](images/ob6.png)
 
 6. On the same user page, open **Tokens and keys**. If you already have the matching private key file, copy its **Fingerprint** and skip Step 7 and 8. Otherwise, click **Add API Key**.
 ![Object Storage](images/ob7.png)
 
-7. Download the new **private key** `.pem` file then click click **Add**
+7. Download the new **private key** `.pem` file, then click **Add**.
 ![Object Storage](images/ob8.png)
 
 8. Copy the displayed fingerprint under **Fingerprint**. Keep the private key in a secure location.
@@ -92,7 +92,11 @@ This lab assumes you have:
    | **Bucketname** | The exact bucket name created above |
    | **Private key passphrase** | Enter it only if the private key was created with a passphrase |
 
-11. Save the catalog configuration and confirm the catalog loaded. Then sign out of the Essbase Admin user.
+11. Click **Test**. If the test succeeds, click **Save** and confirm the catalog loaded. Then sign out of the Essbase ADMIN user.
+
+12. Sign in with the workshop user created in Lab 2. Confirm that the Essbase Applications page opens and **Import** is available.
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 

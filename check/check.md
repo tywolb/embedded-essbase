@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will locate the Oracle Autonomous AI Lakehouse created in Lab 1 as the ADMIN user and create an Essbase user with the necessary permissions. You will then sign in as said Essbase user to confirm access to Database Actions and Data Studio.
+In this lab, you will locate the Oracle Autonomous AI Lakehouse created in Lab 1 as the ADMIN user and create an Essbase user with the necessary permissions. You will then sign in as the Essbase user to confirm access to Database Actions and Data Studio.
 
 Estimated Time: 35 minutes
 
@@ -29,7 +29,7 @@ This lab assumes you have:
 
 ## Task 1: Locate the Existing Autonomous AI Lakehouse
 
-1. Within OCI, Open the hamburger menu in the top left corner and select **Oracle AI Database**, then **Autonomous AI Database**.
+1. Within OCI, open the hamburger menu in the top left corner and select **Oracle AI Database**, then **Autonomous AI Database**.
 ![OCI navigation menu with Autonomous AI Database highlighted](images/ailh_step1.png)
 
 2. Select the region and compartment where your Autonomous AI Lakehouse instance is located.
@@ -64,7 +64,7 @@ This lab assumes you have:
 3. Enter a username for the workshop user and create a password that meets the displayed requirements. Keep the credentials saved for future use.
 ![Credential Configuration](images/ailh_8a.png)
 
-4. Set the  **Quota on tablespace DATA** to the amount approved for your workshop environment. The minimum of 25M is enough for the scope of this workshop.
+4. Set the **Quota on tablespace DATA** to the amount approved for your workshop environment. The minimum of 25M is enough for the scope of this workshop.
 ![Credential Configuration 2](images/ailh_8b.png)
 
 5. Enable **REST, GraphQL, MongoDB API, and Web Access** for the new user.
@@ -89,6 +89,8 @@ This lab assumes you have:
 3. Keep the credentials saved for the next lab.
 
 You have prepared and verified the database user. In the next lab, you will use this account to launch Essbase embedded on AI Lakehouse.
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 

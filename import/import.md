@@ -90,6 +90,8 @@ This lab assumes you have:
 
 You have imported the prepared PeakGear sales cube and verified its outline and data.
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 - [Create and Update a Cube from Tabular Data](https://docs.oracle.com/en/database/other-databases/essbase/21/esscd/create-and-update-cube-tabular-data.html)
